@@ -21,7 +21,7 @@ To run the Guest room booking application using Docker Compose, follow these ste
 2.Navigate to the repository directory:
 
    ```bash
-    cd guest_room_booking_app
+   cd guest_room_booking_app
    ```
 
 3. Build and start the containers using Docker Compose:
@@ -59,6 +59,8 @@ To manage the Docker Compose setup and its services, you can use the following c
 🚀 refer postman to see the details of the endpoints.
 
 for manual deployment :
+
+change the mongodb connection string accordingly.(mongodb://127.0.0.1:27017/mern-rooms)
 
 Navigate to the repository directory:
 
