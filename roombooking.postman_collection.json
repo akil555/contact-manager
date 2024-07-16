@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "31d2db7e-de90-4521-88b9-51b3c960a991",
+		"name": "roombooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30226966"
+	},
+	"item": [
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "bookroom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"room\":{\n    \"_id\":\"66950ecdfe4d0db75645fd34\",\n    \"name\":\"amman rooms\",\n    \"ownerid\": \"6695072216a8491f3ca45933\"\n  },\n  \"userid\": \"669502f12ccc1e5b025c821f\",\n  \"fromdate\": \"2023-07-29\",\n  \"todate\": \"2023-07-31\",\n  \"totalAmount\": 500,\n  \"totaldays\": 5\n\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/bookroom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bookroom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelroom",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookingid\":\"66951e89b647805ba11e4c87\",\n    \"roomid\":\"66950ecdfe4d0db75645fd34\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cancelbooking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cancelbooking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallbookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/getallbookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getallbookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbookingsbyuserid",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "room",
+			"item": [
+				{
+					"name": "addrooms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/home/akil/Desktop/hall.jpg",
+										"/home/akil/Desktop/bedroom.jpg"
+									]
+								},
+								{
+									"key": "name",
+									"value": "amman rooms",
+									"type": "text"
+								},
+								{
+									"key": "ownerid",
+									"value": "6695072216a8491f3ca45933",
+									"type": "text"
+								},
+								{
+									"key": "maxcount",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "phonenumber",
+									"value": "9842166777",
+									"type": "text"
+								},
+								{
+									"key": "rentperday",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "minimumstay",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "maximumstay",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "currentbookigs",
+									"value": "[]",
+									"type": "text"
+								},
+								{
+									"key": "amenities",
+									"value": "\"[tv,ac]\"",
+									"type": "text"
+								},
+								{
+									"key": "roomdetails",
+									"value": "[{\"typeofroom\":\"bedroom\",\"floorsize\":\"300\",\"numberofbeds\":2}]",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "16/59,ram nagar,chennai",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "chennai",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "this a delux room",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/addrooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"addrooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallrooms",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getroombyid",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getownerromsbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/getownerroombyid/6695072216a8491f3ca45933",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getownerroombyid",
+								"6695072216a8491f3ca45933"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleterooms",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/deleteroom/669519a2f053a42b5f497684",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"deleteroom",
+								"669519a2f053a42b5f497684"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"akil\",\n  \"email\": \"akil@gmail.com\",\n  \"phonenumber\": \"9965377088\",\n  \"password\": \"1234\",\n  \"role\": \"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"akil@gmail.com\",\n    \"password\":\"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallusers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
