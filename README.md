@@ -18,14 +18,19 @@ To run the Guest room booking application using Docker Compose, follow these ste
    ```bash
    git clone https://github.com/akil555/guest_room_booking_app
    ```
+2.Navigate to the repository directory:
 
-2. Build and start the containers using Docker Compose:
+   ```bash
+    cd guest_room_booking_app
+   ```
+
+3. Build and start the containers using Docker Compose:
 
    ```bash
    docker-compose up -d
    ```
 
-3. Once the containers are up and running, you can access the backend API at `http://localhost:5000`.
+4. Once the containers are up and running, you can access the backend API at `http://localhost:5000`.
 
 ## Services
 
