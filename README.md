@@ -18,7 +18,6 @@ To run the Guest room booking application using Docker Compose, follow these ste
    ```bash
    git clone https://github.com/akil555/guest_room_booking_app
    ```
-   ```
 
 2. Build and start the containers using Docker Compose:
 
@@ -59,7 +58,7 @@ for manual deployment :
 Navigate to the repository directory:
 
  ```bash
-   cd server
+ cd server
    ```
 
 install the dependencies:
@@ -71,5 +70,5 @@ npm i
 start the server:
 
    ```bash
- node server.js
+node server.js
    ```
